@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head><title>Tenant Demo Site</title></head>
+  <body style="background: #f0f2f5; font-family: sans-serif; padding: 50px;">
+    <h1>Tenant External Website</h1>
+    <p>This is a simulation of your client's site.</p>
+
+    <!-- YOUR SNIPPET -->
+    <script>
+      (function(w,d,s,o,f,js,fjs){
+        w['MyChat-Widget']=o;w[o]=w[o]||function(){(w[o].q=w[o].q||[]).push(arguments)};
+        js=d.createElement(s),fjs=d.getElementsByTagName(s);
+        js.id=o;js.src=f;js.async=1;fjs.parentNode.insertBefore(js,fjs);
+      }(window,document,'script','mw','https://myagent.my-client.co'));
+
+      mw('init', { tenantId: 'FRTO-001', position: 'right' });
+    </script>
+  </body>
+</html>
