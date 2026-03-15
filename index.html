@@ -7,13 +7,27 @@
 
     <!-- YOUR SNIPPET -->
     <script>
-      (function(w,d,s,o,f,js,fjs){
-        w['MyChat-Widget']=o;w[o]=w[o]||function(){(w[o].q=w[o].q||[]).push(arguments)};
-        js=d.createElement(s),fjs=d.getElementsByTagName(s);
-        js.id=o;js.src=f;js.async=1;fjs.parentNode.insertBefore(js,fjs);
+      (function(w,d,s,o,f){
+        w['MyChat-Widget']=o; w[o]=w[o]||function(){(w[o].q=w[o].q||[]).push(arguments)};
+        
+        function load() {
+          if (d.getElementById(o)) return; // Prevent double loading
+          var js=d.createElement(s); js.id=o; js.src=f; js.async=1;
+          var target = d.getElementsByTagName(s)[0] || d.head || d.body;
+          if (target.parentNode) {
+            target.parentNode.insertBefore(js, target);
+          } else {
+            (d.head || d.body).appendChild(js);
+          }
+        }
+    
+        // Load immediately if page is ready, otherwise wait
+        if (d.readyState === 'complete') { load(); } 
+        else { w.addEventListener('load', load); }
       }(window,document,'script','mw','https://myagent.my-client.co'));
-
+    
       mw('init', { tenantId: 'FRTO-001', position: 'right' });
     </script>
+
   </body>
 </html>
