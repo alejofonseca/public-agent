@@ -5,29 +5,13 @@
     <h1>Tenant External Website</h1>
     <p>This is a simulation of your client's site.</p>
 
-    <!-- YOUR SNIPPET -->
-    <script>
-      (function(w,d,s,o,f){
-        w['MyChat-Widget']=o; w[o]=w[o]||function(){(w[o].q=w[o].q||[]).push(arguments)};
-        
-        function load() {
-          if (d.getElementById(o)) return; // Prevent double loading
-          var js=d.createElement(s); js.id=o; js.src=f; js.async=1;
-          var target = d.getElementsByTagName(s)[0] || d.head || d.body;
-          if (target.parentNode) {
-            target.parentNode.insertBefore(js, target);
-          } else {
-            (d.head || d.body).appendChild(js);
-          }
-        }
-    
-        // Load immediately if page is ready, otherwise wait
-        if (d.readyState === 'complete') { load(); } 
-        else { w.addEventListener('load', load); }
-      }(window,document,'script','mw','https://myagent.my-client.co'));
-    
-      mw('init', { tenantId: 'FRTO-001', position: 'right' });
-    </script>
+    <!-- Your iFrame -->
+    <section class="support-chat">
+      <iframe
+        src="https://chat.yourdomain.com/embed/acme"
+        style="width:100%; height:500px; border:none;"
+      ></iframe>
+    </section>
 
   </body>
 </html>
