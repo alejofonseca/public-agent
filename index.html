@@ -19,3 +19,327 @@
 </html>
 -->
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contáctenos | Grupo Inmobiliario Atlas</title>
+
+<style>
+
+/* ------------------ Base Styles ------------------ */
+
+:root{
+  --color-primary:#111827;
+  --color-accent:#007aff;
+  --color-soft:#f9fafb;
+  --border:#e5e7eb;
+  --text-muted:#6b7280;
+  --radius:14px;
+}
+
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:var(--color-soft);
+  color:var(--color-primary);
+}
+
+/* ------------------ Layout ------------------ */
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+/* ------------------ Header ------------------ */
+
+.hero{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.hero h1{
+  font-size:42px;
+  margin-bottom:12px;
+}
+
+.hero p{
+  color:var(--text-muted);
+  max-width:600px;
+  margin:auto;
+}
+
+/* ------------------ Search + Links ------------------ */
+
+.search-box{
+  margin:30px auto;
+  max-width:600px;
+}
+
+.search-box input{
+  width:100%;
+  padding:14px 16px;
+  border-radius:var(--radius);
+  border:1px solid var(--border);
+  font-size:15px;
+}
+
+.quick-links{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+  margin-top:20px;
+}
+
+.quick-links a{
+  text-decoration:none;
+  padding:10px 16px;
+  border-radius:30px;
+  border:1px solid var(--border);
+  color:var(--color-primary);
+  font-size:14px;
+}
+
+.quick-links a:hover{
+  background:white;
+}
+
+/* ------------------ Buttons ------------------ */
+
+.buttons{
+  margin-top:25px;
+  display:flex;
+  justify-content:center;
+  gap:15px;
+}
+
+.btn{
+  padding:12px 20px;
+  border-radius:30px;
+  font-weight:500;
+  text-decoration:none;
+  border:none;
+  cursor:pointer;
+}
+
+.btn-primary{
+  background:var(--color-accent);
+  color:white;
+}
+
+.btn-secondary{
+  border:1px solid var(--border);
+  background:white;
+}
+
+/* ------------------ Chat Section ------------------ */
+
+.chat-section{
+  margin-top:50px;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:40px;
+  align-items:start;
+}
+
+.chat-container{
+  background:white;
+  border-radius:var(--radius);
+  box-shadow:0 10px 25px rgba(0,0,0,0.06);
+  overflow:hidden;
+  min-height:420px;
+}
+
+.chat-container iframe{
+  width:100%;
+  height:420px;
+  border:none;
+}
+
+/* ------------------ Offices ------------------ */
+
+.offices h3{
+  margin-bottom:20px;
+}
+
+.office{
+  margin-bottom:20px;
+  padding-bottom:15px;
+  border-bottom:1px solid var(--border);
+}
+
+.office strong{
+  display:block;
+  margin-bottom:4px;
+}
+
+.office span{
+  color:var(--text-muted);
+  font-size:14px;
+}
+
+/* ------------------ Extra Section ------------------ */
+
+.info-section{
+  margin-top:70px;
+  background:white;
+  border-radius:var(--radius);
+  padding:40px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.05);
+}
+
+.info-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.info-card h4{
+  margin-bottom:8px;
+}
+
+.info-card p{
+  color:var(--text-muted);
+  font-size:14px;
+  line-height:1.6;
+}
+
+/* ------------------ Footer ------------------ */
+
+footer{
+  margin-top:60px;
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+  color:var(--text-muted);
+}
+
+/* ------------------ Responsive ------------------ */
+
+@media (max-width:900px){
+
+.chat-section{
+grid-template-columns:1fr;
+}
+
+.info-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- HERO -->
+
+<section class="hero">
+<h1>Contáctenos</h1>
+
+<p>
+Nuestro equipo de administración inmobiliaria está disponible para ayudarle con consultas sobre propiedades, gestión de alquileres o soporte técnico.
+</p>
+
+<div class="search-box">
+<input type="text" placeholder="Buscar en nuestro centro de ayuda...">
+</div>
+
+<div class="quick-links">
+<a href="#">Preguntas frecuentes</a>
+<a href="#">Administración de propiedades</a>
+<a href="#">Soporte para propietarios</a>
+<a href="#">Centro de documentación</a>
+</div>
+
+<div class="buttons">
+<a class="btn btn-primary" href="#">Contactar ventas</a>
+<a class="btn btn-secondary" href="#">Soporte por email</a>
+</div>
+
+</section>
+
+<!-- CHAT SECTION -->
+
+<section class="chat-section">
+
+<div class="chat-container">
+
+<!-- INSERT YOUR CHAT IFRAME HERE -->
+
+<iframe src="https://chat.tudominio.com/embed/acme"></iframe>
+
+</div>
+
+<div class="offices">
+
+<h3>Nuestras oficinas</h3>
+
+<div class="office">
+<strong>Madrid</strong>
+<span>Calle Serrano 45<br>28001 Madrid<br>+34 91 458 90 11</span>
+</div>
+
+<div class="office">
+<strong>Barcelona</strong>
+<span>Avinguda Diagonal 602<br>08021 Barcelona<br>+34 93 221 18 32</span>
+</div>
+
+<div class="office">
+<strong>Valencia</strong>
+<span>Gran Vía Marqués del Turia 17<br>46005 Valencia<br>+34 96 104 23 77</span>
+</div>
+
+</div>
+
+</section>
+
+<!-- EXTRA SECTION -->
+
+<section class="info-section">
+
+<div class="info-grid">
+
+<div class="info-card">
+<h4>Administración profesional</h4>
+<p>
+Gestionamos propiedades residenciales y comerciales con un enfoque transparente, optimizando ingresos y reduciendo la carga administrativa para propietarios.
+</p>
+</div>
+
+<div class="info-card">
+<h4>Atención personalizada</h4>
+<p>
+Cada cliente cuenta con un gestor dedicado para resolver consultas, coordinar mantenimiento y asegurar el correcto funcionamiento de cada propiedad.
+</p>
+</div>
+
+<div class="info-card">
+<h4>Soluciones digitales</h4>
+<p>
+Nuestra plataforma permite a propietarios e inquilinos acceder a información clave, reportar incidencias y gestionar documentación de forma sencilla.
+</p>
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+<footer>
+
+© 2026 Grupo Inmobiliario Atlas — Administración de Propiedades
+
+</footer>
+
+</body>
+</html>
