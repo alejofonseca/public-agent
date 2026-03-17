@@ -146,11 +146,67 @@ body{
   align-items:start;
 }
 
+  /*
 .chat-container{
   background:white;
   border:1px solid var(--border-light);
 }
+  */
 
+/* Spotlight */
+.chat-spotlight{
+  position:relative;
+  padding:30px;
+}
+
+.chat-spotlight::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+  radial-gradient(
+    circle at center,
+    rgba(0,122,255,0.08),
+    transparent 65%
+  );
+
+  pointer-events:none;
+}
+/* end spotlight */
+
+.chat-container{
+  position:relative;
+
+  background:white;
+  border-radius:18px;
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.08),
+    0 4px 10px rgba(0,0,0,0.05);
+
+  overflow:hidden;
+  min-height:420px;
+
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+
+.chat-container:hover{
+  transform:translateY(-4px);
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.12),
+    0 10px 20px rgba(0,0,0,0.08);
+}
+
+.chat-container iframe{
+  width:100%;
+  height:420px;
+  border:none;
+  display:block;
+}
+
+  /*
 .chat-container iframe{
   border-radius: 9px;
   overflow: hidden;
@@ -160,6 +216,7 @@ body{
   outline:none;
   display:block;
 }
+  */
 
 /* ------------------ Offices ------------------ */
 
@@ -271,14 +328,15 @@ Nuestro equipo de administración inmobiliaria está disponible para ayudarle co
 
 <section class="chat-section">
 
-<div class="chat-container" style="Background-color: transparent">
-
-<!-- INSERT YOUR CHAT IFRAME HERE -->
-  <iframe
-    src="https://myagent.my-client.co/embed/1ff46451-98ff-4b5b-b21f-2007cc66eed6"
-  ></iframe>
+<div class="chat-spotlight">
+  <div class="chat-container" style="Background-color: transparent">
+    <!-- INSERT YOUR CHAT IFRAME HERE -->
+    <iframe
+      src="https://myagent.my-client.co/embed/1ff46451-98ff-4b5b-b21f-2007cc66eed6"
+    ></iframe>
+  </div>
 </div>
-
+  
 <div class="offices">
 
 <h3>Nuestras oficinas</h3>
