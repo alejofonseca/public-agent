@@ -140,18 +140,20 @@ body{
 
 .chat-section{
   margin-top:50px;
+  display:flex;
+  justify-content:center;
+  /*
   display:grid;
   grid-template-columns: 1fr 2fr;
   gap:40px;
   align-items:start;
+  */
 }
 
-  /*
-.chat-container{
-  background:white;
-  border:1px solid var(--border-light);
+.chat-wrapper{
+  width:66.666%; /* 2/3 of screen */
+  max-width:1000px; /* prevents it from getting too wide */
 }
-  */
 
 /* Spotlight */
 .chat-spotlight{
@@ -177,17 +179,13 @@ body{
 
 .chat-container{
   position:relative;
-
   background:white;
   border-radius:10px;
-
   box-shadow:
     0 15px 40px rgba(0,0,0,0.08),
     0 4px 10px rgba(0,0,0,0.05);
-
   overflow:hidden;
   min-height:420px;
-
   transition:transform .25s ease, box-shadow .25s ease;
 }
 
@@ -329,6 +327,7 @@ Nuestro equipo de administración inmobiliaria está disponible para ayudarle co
 <!-- CHAT SECTION -->
 
 <section class="chat-section">
+<!--
 <div class="offices">
 
 <h3>Nuestras oficinas</h3>
@@ -349,15 +348,18 @@ Nuestro equipo de administración inmobiliaria está disponible para ayudarle co
 </div>
 
 </div>
+-->
 
-<div class="chat-spotlight">
-  <div class="chat-container" style="Background-color: transparent">
-    <!-- INSERT YOUR CHAT IFRAME HERE -->
-    <iframe
-      src="https://myagent.my-client.co/embed/1ff46451-98ff-4b5b-b21f-2007cc66eed6"
-    ></iframe>
+  <div class="chat-wrapper">
+    <div class="chat-spotlight">
+      <div class="chat-container" style="Background-color: transparent">
+        <!-- INSERT YOUR CHAT IFRAME HERE -->
+        <iframe
+          src="https://myagent.my-client.co/embed/1ff46451-98ff-4b5b-b21f-2007cc66eed6"
+        ></iframe>
+      </div>
+    </div>
   </div>
-</div>
 
 </section>
 
