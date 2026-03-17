@@ -36,6 +36,7 @@
   --color-soft:#f9fafb;
   --border:#e5e7eb;
   --text-muted:#6b7280;
+  --text-subtitle:#5a616e;
   --radius:14px;
 }
 
@@ -52,6 +53,14 @@ body{
   max-width:1400px;
   margin:auto;
   padding:40px 20px;
+}
+
+.myagentHeader{
+  width:100%;
+  margin:auto;
+  padding:40px 20px;
+  text-align:center;
+  color:var(--text-subtitle);
 }
 
 /* ------------------ Header ------------------ */
@@ -352,10 +361,12 @@ Nuestro equipo de administración inmobiliaria está disponible para ayudarle co
   
   <div class="chat-wrapper">
     
-    <h2>MyAgent</h2>
-    <p>
-    Nuestro equipo de administración inmobiliaria está disponible para ayudarle con consultas sobre propiedades, gestión de alquileres o soporte técnico.
-    </p>
+    <center><h2>MyAgent</h2></center>
+    <div class="myagentHeader">
+      <p>
+      Nuestro equipo de administración inmobiliaria está disponible para ayudarle con consultas sobre propiedades, gestión de alquileres o soporte técnico.
+      </p>
+    </div>
     
     <div class="chat-spotlight">
       <div class="chat-container" style="Background-color: transparent">
